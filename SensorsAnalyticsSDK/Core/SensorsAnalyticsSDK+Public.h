@@ -55,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (atomic, readonly, copy) NSString *distinctId;
 
+/// 设备id
+@property (atomic, readonly, copy) NSString *deviceId;
+
 /**
  * @property
  *

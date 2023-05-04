@@ -82,6 +82,8 @@ static SensorsAnalyticsSDK *sharedInstance = nil;
 
 @property (nonatomic, strong) SAAppLifecycle *appLifecycle;
 
+@property (nonatomic, strong) NSString * _hardwareID;
+
 @end
 
 @implementation SensorsAnalyticsSDK
@@ -363,6 +365,13 @@ static SensorsAnalyticsSDK *sharedInstance = nil;
 
 - (NSString *)distinctId {
     return self.identifier.distinctId;
+}
+
+- (NSString *)deviceId {
+  if (__hardwareID == nil){
+    __hardwareID = SAIdentifier.hardwareID;
+  }
+  return __hardwareID;
 }
 
 - (void)resetAnonymousId {
