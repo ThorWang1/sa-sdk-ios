@@ -51,6 +51,9 @@ extern NSString * const SensorsAnalyticsIdentityKeyEmail;
  */
 @property (atomic, readonly, copy) NSString *distinctId;
 
+/// 设备id
+@property (atomic, readonly, copy) NSString *deviceId;
+
 /**
  * @property
  *
